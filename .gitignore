@@ -1,0 +1,12 @@
+# Ignore folders to avoid accidentaly pushing them from root
+.vs/
+.idea/
+.vscode/
+
+# Ignore the AI chat history logs (if stored locally)
+.gemini/
+
+# Just in case someone builds from root
+node_modules/
+bin/
+obj/

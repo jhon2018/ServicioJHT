@@ -1,0 +1,6 @@
+@JHT.Logistics.API_HostAddress = http://localhost:5251
+
+GET {{JHT.Logistics.API_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

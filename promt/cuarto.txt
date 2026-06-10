@@ -1,0 +1,50 @@
+Comencemos la implementación del proyecto.
+
+FASE ACTUAL:
+Construcción de la base técnica del Backend.
+
+Genera únicamente la solución Backend ASP.NET Core 8 
+respetando estrictamente DOC-001 a DOC-015.
+
+Tecnologías obligatorias:
+
+* ASP.NET Core 8
+* PostgreSQL
+* Entity Framework Core
+* JWT Authentication
+* Serilog
+* FluentValidation
+* Clean Architecture
+
+Objetivo de esta fase:
+
+1. Definir estructura de la solución.
+2. Definir proyectos y responsabilidades.
+3. Definir dependencias NuGet.
+4. Definir configuración inicial.
+5. Definir estrategia de configuración (.env / appsettings).
+6. Definir estrategia de logging.
+7. Definir estrategia de auditoría.
+8. Generar README técnico de la solución.
+
+Entregables esperados:
+
+* Estructura de carpetas.
+* Estructura de proyectos.
+* Archivos .csproj.
+* Dependencias NuGet justificadas.
+* README técnico.
+* Convenciones de desarrollo.
+
+NO GENERAR TODAVÍA:
+
+* Entidades.
+* DbContext.
+* Migraciones.
+* Controllers.
+* Endpoints.
+* Casos de uso.
+* Repositorios.
+* Código de negocio.
+
+Primero quiero aprobar la arquitectura técnica antes de continuar con la siguiente fase.

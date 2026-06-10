@@ -1,0 +1,43 @@
+Actúa como Arquitecto de Software Senior.
+
+Antes de generar código, analiza completamente el proyecto.
+
+Lee y comprende todos los documentos ubicados en:
+
+/docs
+
+Especialmente:
+
+DOC-001 al DOC-013.
+
+También revisa:
+
+/assets/branding
+/assets/ui-reference
+/assets/ui-assets
+
+Objetivo:
+
+Construir el MVP del Portal de Gestión y Trazabilidad de Servicios Logísticos JHT.
+
+Antes de escribir una sola línea de código quiero que:
+
+1. Analices toda la documentación.
+2. Detectes inconsistencias, riesgos o vacíos funcionales.
+3. Detectes posibles mejoras arquitectónicas.
+4. Valides que el modelo de datos soporte todos los casos de uso.
+5. Valides que la arquitectura soporte la futura aplicación Flutter.
+6. Valides que la experiencia visual definida en DOC-012 y DOC-013 sea implementable.
+
+NO GENERES CÓDIGO.
+
+Entrega únicamente:
+
+- Resumen ejecutivo.
+- Riesgos encontrados.
+- Vacíos encontrados.
+- Mejoras recomendadas.
+- Preguntas críticas pendientes.
+
+Si algún punto no está documentado, pregúntalo antes de asumir.
+

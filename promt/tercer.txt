@@ -1,0 +1,31 @@
+Genera el backlog técnico de implementación.
+
+Divide el proyecto en fases.
+
+Fase 1:
+Base del proyecto.
+
+Fase 2:
+Seguridad.
+
+Fase 3:
+Clientes.
+
+Fase 4:
+Conductores.
+
+Fase 5:
+Vehículos.
+
+Fase 6:
+Servicios.
+
+Fase 7:
+Tracking.
+
+Fase 8:
+Auditoría.
+
+Indica dependencias entre módulos.
+
+No generes código todavía.

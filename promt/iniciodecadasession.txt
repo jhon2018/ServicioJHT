@@ -1,0 +1,68 @@
+REGLA PERMANENTE
+
+Antes de implementar cualquier funcionalidad:
+
+1. Revisar DOC-001 a DOC-013.
+2. Revisar assets disponibles.
+3. No asumir requerimientos no documentados.
+4. No inventar tablas.
+5. No inventar estados.
+6. No inventar roles.
+7. No inventar flujos.
+8. Si falta información, preguntar.
+9. Priorizar mantenibilidad sobre velocidad.
+10. Mantener compatibilidad con futura aplicación Flutter.
+
+
+REGLA PARA GENERACIÓN VISUAL
+
+Cuando generes interfaces:
+
+1. Revisa DOC-012 (Identidad Visual).
+2. Revisa DOC-013 (Experiencia Visual).
+3. Revisa assets/branding y assets/ui-reference.
+4. Usa colores oficiales.
+5. Usa tipografía oficial.
+6. No uses imágenes inventadas.
+7. Si necesitas una imagen:
+    - Genera un placeholder con nombre.
+    - Genera descripción.
+    - Genera prompt de creación.
+    - Espera aprobación antes de generar imagen.
+8. Mantén diseño limpio y corporativo.
+9. Usa skeletons para loading.
+10. Usa microanimaciones cuando sea apropiado.
+
+
+
+    REGLA DE SEGURIDAD VISUAL
+    NO GENERES IMÁGENES SIN PREVIA APROBACIÓN.
+    SI UNA IMAGEN ES NECESARIA:
+        1. Nombra el archivo placeholder (ej. CLIENTES_MAIN_01).
+        2. Describe el propósito.
+        3. Indica ratio recomendado.
+        4. Genera prompt de creación.
+        5. Espera mi aprobación antes de usar GenAI para generar la imagen.
+    PROHIBIDO generate() CON IMÁGENES SIN MI PERMISO PREVIO.
+
+
+REGLA DE FIDELIDAD MÁXIMA
+
+Cuando generes código:
+
+NO MODIFIQUES EL MODELO DE DATOS (ej. TBL_SERVICIOS) SIN MI PERMISO.
+
+Si una implementación requiere cambios en entidades, tablas o relaciones:
+
+1. Identifica la entidad afectada (ej. TBL_SERVICIOS).
+2. Indica explícitamente qué campo/relación necesitas modificar.
+3. Explica el impacto en el negocio.
+4. Espera mi aprobación antes de realizar el cambio.
+5. Genera primero el script SQL de migración.
+6. Luego genera el código actualizado.
+
+NO INVENTES CAMPOS EN ENTIDADES EXISTENTES (ej. crear campos en TBL_SERVICIOS sin preguntar).
+
+Los documentos oficiales (DOC-001 a DOC-013) son la fuente de verdad.
+
+Si el modelo actual NO soporta una funcionalidad, SOLICITA CAMBIO FORMALMENTE.
