@@ -36,4 +36,50 @@ public class ServiciosController : ControllerBase
         var result = await _mediator.Send(command);
         return CreatedAtAction(nameof(GetAll), new { id = result.SerId }, result); // Simplificado
     }
+
+    [HttpPost("{id}/assign")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [Authorize(Roles = "ADMINISTRADOR,OPERADOR")]
+    public async Task<IActionResult> AssignUnidad(int id, [FromBody] AssignUnidadRequest request)
+    {
+        var command = new AssignUnidadCommand
+        {
+            SerId = id,
+            ConId = request.ConId,
+            VehId = request.VehId
+        };
+        var result = await _mediator.Send(command);
+        if (!result) return NotFound();
+        return Ok(new { success = true });
+    }
+
+    [HttpPost("{id}/estado")]
+    [ProducesResponseType(StatusCodes.Status200OK)]
+    [ProducesResponseType(StatusCodes.Status400BadRequest)]
+    [Authorize(Roles = "ADMINISTRADOR,OPERADOR,CONDUCTOR")]
+    public async Task<IActionResult> UpdateEstado(int id, [FromBody] UpdateEstadoRequest request)
+    {
+        var command = new UpdateServicioEstadoCommand
+        {
+            SerId = id,
+            EstId = request.EstId,
+            Observacion = request.Observacion
+        };
+        var result = await _mediator.Send(command);
+        if (!result) return NotFound();
+        return Ok(new { success = true });
+    }
+}
+
+public class AssignUnidadRequest
+{
+    public int ConId { get; set; }
+    public int VehId { get; set; }
+}
+
+public class UpdateEstadoRequest
+{
+    public int EstId { get; set; }
+    public string? Observacion { get; set; }
 }

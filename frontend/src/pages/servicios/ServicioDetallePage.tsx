@@ -6,12 +6,14 @@ import {
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import api from '../../services/api';
 import { useForm, Controller } from 'react-hook-form';
+import AssignUnidadDialog from './AssignUnidadDialog';
 
 const ServicioDetallePage = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [servicio, setServicio] = useState<any>(null);
   const [loading, setLoading] = useState(true);
+  const [openAssignDialog, setOpenAssignDialog] = useState(false);
   
   // Para la actualización de estado
   const { control, handleSubmit, reset } = useForm({
@@ -168,11 +170,29 @@ const ServicioDetallePage = () => {
                 <Typography variant="body1" sx={{ mb: 2 }}>{servicio.conductorNombre || 'Ninguno'}</Typography>
                 
                 <Typography variant="body2" color="text.secondary" sx={{ mb: 1 }}>Vehículo Asignado:</Typography>
-                <Typography variant="body1">{servicio.vehiculoPlaca || 'Ninguno'}</Typography>
+                <Typography variant="body1" sx={{ mb: 3 }}>{servicio.vehiculoPlaca || 'Ninguno'}</Typography>
+
+                <Button 
+                  variant="outlined" 
+                  fullWidth 
+                  onClick={() => setOpenAssignDialog(true)}
+                >
+                  Asignar / Cambiar Unidad
+                </Button>
              </CardContent>
           </Card>
         </Grid>
       </Grid>
+
+      <AssignUnidadDialog
+        open={openAssignDialog}
+        onClose={() => setOpenAssignDialog(false)}
+        serId={servicio.serId}
+        onAssignSuccess={() => {
+          setOpenAssignDialog(false);
+          fetchServicio();
+        }}
+      />
     </Box>
   );
 };
